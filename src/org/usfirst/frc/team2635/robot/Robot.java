@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.SerialPort;
 import edu.wpi.first.wpilibj.CANTalon.ControlMode;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -190,12 +191,16 @@ public class Robot extends IterativeRobot
 	 */
 	public void autonomousPeriodic()
 	{
-
+		
 	}
 
 	/**
 	 * This function is called periodically during operator control
 	 */
+	@Override teleopInit()
+	{
+		
+	}
 	public void teleopPeriodic()
 	{
 		//MORE LIKE TRIPLE X AMIRITE

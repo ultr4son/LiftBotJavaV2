@@ -1,9 +1,8 @@
 package org.usfirst.frc.team2635.robot;
 
 import edu.wpi.first.wpilibj.SpeedController;
-import actuator.IActuator;
-
-public class TwoMotorActuator implements IActuator<Double>
+import com.lakemonsters2635.actuator.interfaces.IActuator;
+public class TwoMotorActuator extends IActuator<Double>
 {
 	SpeedController motor1;
 	SpeedController motor2;

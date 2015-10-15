@@ -1,8 +1,7 @@
 package org.usfirst.frc.team2635.robot;
 
 import com.kauailabs.navx.frc.AHRS;
-
-import sensor.ISensor;
+import com.lakemonsters2635.sensor.ISensor;
 
 public class NavxHeading implements ISensor<Double>
 {

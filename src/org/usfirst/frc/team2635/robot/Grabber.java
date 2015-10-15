@@ -1,6 +1,6 @@
 package org.usfirst.frc.team2635.robot;
 
-import actuator.IActuator;
+import com.lakemonsters2635.actuator.interfaces.IActuator;
 
 public class Grabber
 {

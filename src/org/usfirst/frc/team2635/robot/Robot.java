@@ -223,7 +223,7 @@ public class Robot extends IterativeRobot
 	}
 	public void teleopPeriodic()
 	{
-		
+			
 			//MORE LIKE TRIPLE X AMIRITE
 			double X = xboxController.getRawAxis(H_AXIS);
 			double Y = -xboxController.getRawAxis(MOVE_AXIS);

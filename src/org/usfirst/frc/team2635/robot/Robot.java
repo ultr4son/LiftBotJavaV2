@@ -8,7 +8,6 @@ import com.lakemonsters2635.actuator.interfaces.IActuator;
 import com.lakemonsters2635.composites.HDrive;
 import com.lakemonsters2635.composites.HDrivePneumatic;
 import com.lakemonsters2635.composites.HDrivePneumaticClosedLoop;
-import com.lakemonsters2635.util.OneShot;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -74,14 +73,14 @@ public class Robot extends IterativeRobot
 	double HDRIVE_D_DEFAULT = 0.0;
 	String HDRIVE_D_KEY = "HDriveD";
 	
-	double TOTE_P_DEFAULT = 0.0;
+	double TOTE_P_DEFAULT = 0.1;
 	String TOTE_P_KEY = "ToteP";
 	double TOTE_I_DEFAULT = 0.0;
 	String TOTE_I_KEY = "ToteI";
 	double TOTE_D_DEFAULT = 0.0;
 	String TOTE_D_KEY = "ToteD";
 
-	double CAN_P_DEFAULT = 0.0;
+	double CAN_P_DEFAULT = 0.1;
 	String CAN_P_KEY = "CanP";
 	double CAN_I_DEFAULT = 0.0;
 	String CAN_I_KEY = "CanI";
@@ -110,10 +109,10 @@ public class Robot extends IterativeRobot
 	
 	//TODO: get the actual values for these from the labview version.
 	int toteIndex = 0;
-	double[] TOTE_POSITIONS = {0, 1000.0, 2000.0, 4000.0, 8000.0 };
+	double[] TOTE_POSITIONS = {0, 1000.0, 2500.0, 5000.0, 7500.0, 10000.0, 12500 };
 	int canIndex = 0;
 	
-	double[] CAN_POSITIONS = {0, 1000.0, 2000.0, 4000.0, 8000.0};
+	double[] CAN_POSITIONS = {0, 4000.0, 8000.0};
 
 	DoubleSolenoid totePiston;
 	DoubleSolenoid canPiston;
@@ -125,7 +124,7 @@ public class Robot extends IterativeRobot
 	OneShot<Boolean> toteIncrementOneShot;
 	OneShot<Boolean> toteDecrementOneShot;
 	
-	OneShot<Double> canIncrementOneShot;
+	OneShot<Integer> canOneShot;
 	Preferences robotPreferences = Preferences.getInstance();
 	
 	public void robotInit()
@@ -133,6 +132,7 @@ public class Robot extends IterativeRobot
 		xboxController = new Joystick(JOYSTICK_CHANNEL);
 		toteIncrementOneShot = new OneShot<Boolean>(false);
 		toteDecrementOneShot = new OneShot<Boolean>(false);
+		canOneShot = new OneShot<Integer>(-1);
 		//DRIVE INITIALIZATION
 		rearLeftMotor = new CANTalon(REAR_LEFT_CHANNEL);
 		rearLeftMotor.changeControlMode(ControlMode.PercentVbus);
@@ -235,12 +235,12 @@ public class Robot extends IterativeRobot
 			boolean toteOpen = xboxController.getRawButton(OPEN_TOTE_LIFT);
 			boolean toteClose = xboxController.getRawButton(CLOSE_TOTE_LIFT);
 			
-			double canPOV = xboxController.getPOV();
+			double canPOV = canOneShot.oneShot(xboxController.getPOV());
 	
 		hDrive.drive(X, Y, rotation);
 		
 		
-		if(toteIncrement && toteIndex < TOTE_POSITIONS.length - 1 && toteIndex < canIndex)
+		if(toteIncrement && toteIndex < TOTE_POSITIONS.length - 1 && TOTE_POSITIONS[toteIndex] < CAN_POSITIONS[canIndex])
 		{
 			++toteIndex;
 		}
@@ -272,7 +272,7 @@ public class Robot extends IterativeRobot
 		{
 			canIndex++;
 		}
-		if(canPOV == DECREMENT_CAN_LIFT && canIndex > 0 && canIndex > toteIndex)
+		if(canPOV == DECREMENT_CAN_LIFT && canIndex > 0 && TOTE_POSITIONS[toteIndex] < CAN_POSITIONS[canIndex])
 		{
 			canIndex--;
 		}
@@ -284,6 +284,7 @@ public class Robot extends IterativeRobot
 		SmartDashboard.putNumber("canindex", canIndex);
 		SmartDashboard.putBoolean("incrementTote", toteIncrement);
 		SmartDashboard.putBoolean("decrementTote", toteDecrement);
+		SmartDashboard.putNumber("canPovOneShot", canPOV);
 	}
 
 	/**

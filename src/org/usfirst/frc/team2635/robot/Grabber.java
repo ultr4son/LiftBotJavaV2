@@ -1,11 +1,12 @@
 package org.usfirst.frc.team2635.robot;
 
-import com.lakemonsters2635.actuator.interfaces.IActuator;
+import com.lakemonsters2635.actuator.interfaces.BaseActuator;
+
 
 public class Grabber
 {
-	IActuator<Boolean> grabber;
-	public Grabber(IActuator<Boolean> grabber)
+	BaseActuator<Boolean> grabber;
+	public Grabber(BaseActuator<Boolean> grabber)
 	{
 		super();
 		this.grabber = grabber;

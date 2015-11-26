@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" always-add-relationships="true" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="org.usfirst.frc.team2635.robot.OneShot" project="LiftBotJavaV2" 
+    file="/LiftBotJavaV2/src/org/usfirst/frc/team2635/robot/OneShot.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="136" x="274" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="org.usfirst.frc.team2635.robot.ActuatorTwoMotor" project="LiftBotJavaV2" 
+    file="/LiftBotJavaV2/src/org/usfirst/frc/team2635/robot/ActuatorTwoMotor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="280" x="638" y="526"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="org.usfirst.frc.team2635.robot.Lift" project="LiftBotJavaV2" 
+    file="/LiftBotJavaV2/src/org/usfirst/frc/team2635/robot/Lift.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="141" x="267" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="org.usfirst.frc.team2635.robot.Grabber" project="LiftBotJavaV2" 
+    file="/LiftBotJavaV2/src/org/usfirst/frc/team2635/robot/Grabber.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="169" x="448" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="org.usfirst.frc.team2635.robot.NavxHeadingPIDSource" project="LiftBotJavaV2" 
+    file="/LiftBotJavaV2/src/org/usfirst/frc/team2635/robot/NavxHeadingPIDSource.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="177" x="450" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="org.usfirst.frc.team2635.robot.DrivePIDOutput" project="LiftBotJavaV2" 
+    file="/LiftBotJavaV2/src/org/usfirst/frc/team2635/robot/DrivePIDOutput.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="159" x="667" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.lakemonsters2635.composites.HDrivePneumatic" project="LiftBotJavaV2" 
+    file="/LakeLib/LakeLib.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="117" width="367" x="678" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.lakemonsters2635.composites.HDrive" project="LiftBotJavaV2" 
+    file="/LakeLib/LakeLib.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="99" width="185" x="866" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.lakemonsters2635.actuator.modules.DriveArcade" project="LakeLib" 
+    file="/LakeLib/src/com/lakemonsters2635/actuator/modules/DriveArcade.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="182" x="45" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.lakemonsters2635.actuator.modules.ActuatorSimple" project="LakeLib" 
+    file="/LakeLib/src/com/lakemonsters2635/actuator/modules/ActuatorSimple.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="449" y="546"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="com.lakemonsters2635.composites.BaseLauncher" project="LakeLib" 
+    file="/LakeLib/src/com/lakemonsters2635/composites/BaseLauncher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="283" y="414"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

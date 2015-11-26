@@ -1,12 +1,13 @@
 package org.usfirst.frc.team2635.robot;
 
 import edu.wpi.first.wpilibj.SpeedController;
-import com.lakemonsters2635.actuator.interfaces.IActuator;
-public class TwoMotorActuator extends IActuator<Double>
+
+import com.lakemonsters2635.actuator.interfaces.BaseActuator;
+public class ActuatorTwoMotor extends BaseActuator<Double>
 {
 	SpeedController motor1;
 	SpeedController motor2;
-	public TwoMotorActuator(SpeedController motor1, SpeedController motor2)
+	public ActuatorTwoMotor(SpeedController motor1, SpeedController motor2)
 	{
 		super();
 		this.motor1 = motor1;
